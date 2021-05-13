@@ -42,13 +42,13 @@ namespace GradeBook.UserInterfaces
             var name = parts[1];
             BaseGradeBook gradeBook = new BaseGradeBook(name);
             var type = parts[2];
-            if(type=="standard")
+            if(type == "standard")
             {
-                gradeBook.Type = Enums.GradeBookType.Standard;
+                gradeBook = new StandardGradeBook(name);
             }
             else if(type == "ranked")
             {
-                gradeBook.Type = Enums.GradeBookType.Ranked;
+                gradeBook = new RankedGradeBook(name);
             }
             else
             {
